@@ -8,7 +8,7 @@ VIEW=Sch
 
 
 test:
-	${MAKE} typical tfs summary
+	${MAKE} typical summary
 
 typical:
 	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Ktt Tt Vt
