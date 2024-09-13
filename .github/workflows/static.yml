@@ -30,15 +30,24 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     container:
-      image: wulffern/aicex:22.04_0.1.3
+      image: wulffern/aicex:0.1.1
       options: --user root
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Checkout tech
-        run: cd ../ && git clone git@github.com:wulffern/tech_sky130A.git
+        run: cd ../ && git clone https://github.com/wulffern/tech_sky130A.git
+      - name: Install cicsim
+        run:  python3 -m pip install cicsim
       - name: Run tests
-        run: make all
+        run: |
+          echo "set ngbehavior=hsa\nset ng_nomodcheck \nset skywaterpdk \n set num_threads=8 \n option noinit \n option klu \n optran 0 0 0 100p 2n 0 \n option opts" > $HOME/.spiceinit
+          export PDK_ROOT=/opt/pdk/share/pdk
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          echo "/opt/eda/bin" >> $GITHUB_PATH
+          export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/eda/lib
+          export PATH=/opt/eda/bin:$HOME/.local/bin:$PATH
+          make all
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
