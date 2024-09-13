@@ -1,0 +1,29 @@
+#<name>:
+#  src:
+#    - <paramters>
+#  typ: <typical spec value>
+#  name: <long name>
+#  min: <minimum spec value>
+#  max: <maximum spec value>
+#  scale: <scale, multiply result by scale>
+#  digits: <significant digits>
+#  unit: Unit
+
+adB_gain:
+  src: a_gain_dB
+  name: Gain stage gain
+  min: 4
+  typ: 10
+  max: 20
+  scale: 1
+  digits: 2
+  unit: dB
+adB_input:
+  src: a_input_dB
+  name: Gain stage gain
+  min: -2
+  typ: -0.5
+  max: 0
+  scale: 1
+  digits: 2
+  unit: dB

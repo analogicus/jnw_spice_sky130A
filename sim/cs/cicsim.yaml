@@ -1,0 +1,6 @@
+options:
+  useTmpDir: False
+  sha: True
+corner:
+  Lay: ''
+  Sch: ''

@@ -1,0 +1,13 @@
+* Measure nmos
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+meas tran vpp_vin PP v(vin)
+meas tran vpp_vg PP v(vg)
+meas tran vpp_vout PP v(vout)
+
+echo "MEAS_END"
+.endc

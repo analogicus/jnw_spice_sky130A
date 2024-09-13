@@ -1,0 +1,13 @@
+description: |
+  # Common Source Amplifier
+simulations:
+   tran:
+    name: Transient analysis of Common Source Amplifier
+    description: |
+    data:
+      - name: Sch_typ
+        src: results/tran_Sch_typical
+        method: typical
+      - name: Sch_tfs
+        src: results/tran_Sch_tfs
+        method: minmax

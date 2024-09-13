@@ -1,0 +1,6 @@
+corner:
+  Lay: ''
+  Sch: ''
+ngspice:
+  library: JNW_SPICE_SKY130A
+  cell: nmos
