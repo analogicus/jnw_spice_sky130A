@@ -20,7 +20,7 @@ adB_gain:
   unit: dB
 adB_input:
   src: a_input_dB
-  name: Gain stage gain
+  name: Input gain
   min: -2
   typ: -0.5
   max: 0
