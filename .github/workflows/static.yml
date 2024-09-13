@@ -41,6 +41,7 @@ jobs:
         run:  python3 -m pip install cicsim
       - name: Run tests
         run: |
+          sudo apt install pandoc
           echo "set ngbehavior=hsa\nset ng_nomodcheck \nset skywaterpdk \n set num_threads=8 \n option noinit \n option klu \n optran 0 0 0 100p 2n 0 \n option opts" > $HOME/.spiceinit
           export PDK_ROOT=/opt/pdk/share/pdk
           echo "$HOME/.local/bin" >> $GITHUB_PATH
