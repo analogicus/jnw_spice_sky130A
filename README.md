@@ -2,57 +2,19 @@
 # JNW_SPICE_SKY130A
 
 # Who
-wulff
+Carsten Wulff
 
 # Why
- <explain why you made this module>
+ Demo of running spice simulations on github actions
 
 # How
- <explain short how you made this module>
 
+The testbench is `sim/cs/tran.spi`
 
-# What
+The measurements is `sim/cs/tran.meas`
 
-| What            | Lib/Folder       | Cell/Name |
-| :-              | :-:              | :-:       |
-| Schematic       | JNW_SPICE_SKY130A | JNW_SPICE |
-| Layout          | JNW_SPICE_SKY130A | JNW_SPICE |
-| LPE             | JNW_SPICE_SKY130A | JNW_SPICE |
+The post processing is `sim/cs/tran.py`
 
+# What 
 
-# Changelog/Plan
-| Version | Status | Comment|
-| :-| :-| :-|
-|0.1.0 | :x: | Make something |
-
-
-# Signal interface
-| Signal       | Direction | Domain  | Description                               |
-| :---         | :---:     | :---:   | :---                                      |
-| VDD_1V8         | Input     | VDD_1V8 | Main supply                               |
-| VSS         | Input     | Ground  |                                           |
-| PWRUP_1V8     | Input    | VDD_1V8 | Power up the circuit                       |
-
-
-# Key parameters
-| Parameter           | Min     | Typ           | Max     | Unit  |
-| :---                | :-:     | :-:           | :-:     | :---: |
-| Technology          |         | Skywater 130 nm |         |       |
-| AVDD                | 1.7    | 1.8           | 1.9    | V     |
-| Temperature         | -40     | 27            | 125     | C     |
-
-
-# Status
-
-| Stage                       | TYPE | Status | Comment                        |
-| :---                        | :-:  | :---:  | :--:                           |
-| Specification               | DOC  | :x:    |                                |
-| Schematic                   | VIEW | :x:    |                                |
-| Schematic simulation        | VER  | N/A    |                                |
-| Layout                      | VIEW | :x:    |                                |
-| Layout parasitic extraction | VIEW | :x:    |                                |
-| LPE simulation              | VER  | :x:    |                                |
-| LVS                         | VER  | :x:    |                                |
-| DRC                         | VER  | :x:    |                                |
-| ERC                         | VER  | :x:    |                                |
-| ANT                         | VER  | :x:    |                                |
+The results can be seen in [cs/README](cs/README.html)

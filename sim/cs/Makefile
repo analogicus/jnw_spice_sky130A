@@ -28,4 +28,4 @@ summary:
 	echo  "\n# Post-Process \n\n\`\`\`python" >> README.md
 	cat tran.py >> README.md
 	echo  "\n\`\`\` \n\n" >> README.md
-	pandoc -s README.md -o README.html
+	pandoc --css ../../pandoc.css -s README.md -o README.html
