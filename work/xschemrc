@@ -1,2 +1,0 @@
-source ../tech/xschem/xschemrc
-append XSCHEM_LIBRARY_PATH :../design
