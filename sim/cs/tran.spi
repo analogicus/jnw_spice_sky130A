@@ -24,7 +24,7 @@ VIN VIN 0 dc 0 sin (0 10m 1G 1u 0 0 )
 *- Make a bias source
 R1 VDD_1V8 VBIAS 10k
 XM1 VBIAS VBIAS VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=1
-R2 VBIAS VG 10M
+R2 VBIAS VG 1k
 
 *- Common source amplifier
 C1 VIN VG 1p
