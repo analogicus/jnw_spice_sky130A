@@ -18,7 +18,7 @@ The post processing is [sim/cs/tran.py](sim/cs/tran.py)
 ## What 
 
 The simulation results can be seen in [sim/cs/README](sim/cs/README.html) (link
-does not work on the git repo, only)
+does not work on the git repo, only on the github pages)
 
 
 ## How to use it yourself
