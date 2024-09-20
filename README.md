@@ -15,18 +15,15 @@ The measurements is [sim/cs/tran.meas](sim/cs/tran.meas)
 
 The post processing is [sim/cs/tran.py](sim/cs/tran.py)
 
-## What 
-
-The simulation results can be seen in [sim/cs/README](sim/cs/README.html) (link
-does not work on the git repo, only on the github pages)
-
-
 ## How to use it yourself
 
 1. Fork the repo 
-2. Edit [sim/cs/tran.spi](sim/cs/tran.spi)
-3. Wait for a minute or two before the action complets
-4. Check the github pages
+1. Settings->Pages->Build and deployment, select github actions
+1. Click About settings top right. Use your github pages webiste
+1. Actions -> Enable workflows
+1. Edit [sim/cs/tran.spi](sim/cs/tran.spi)
+1. Wait for a minute or two before the action complets
+1. Check the github pages
 
 ## Local run
 

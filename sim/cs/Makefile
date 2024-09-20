@@ -29,3 +29,11 @@ summary:
 	cat tran.py >> README.md
 	echo  "\n\`\`\` \n\n" >> README.md
 	pandoc --css ../../pandoc.css -s README.md -o README.html
+
+
+clean:
+	-rm -rf output_*
+	-rm -rf __pycache__
+	-rm *.run
+	-rm *.pdf
+	-rm *.csv
