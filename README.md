@@ -1,11 +1,12 @@
 
-# JNW_SPICE_SKY130A
 
 ## Who
+
 Carsten Wulff
 
 ## Why
- Demo of running spice simulations on github actions
+
+Demo of running spice simulations on github actions
 
 ## How
 
@@ -15,8 +16,9 @@ The measurements is [sim/cs/tran.meas](sim/cs/tran.meas)
 
 The post processing is [sim/cs/tran.py](sim/cs/tran.py)
 
-## How to use it yourself
+The simulation is run on every commit using github actions
 
+## How to modify and use
 1. Fork the repo 
 1. Settings->Pages->Build and deployment, select github actions
 1. Click About settings top right. Use your github pages webiste
@@ -27,9 +29,7 @@ The post processing is [sim/cs/tran.py](sim/cs/tran.py)
 
 ## Local run
 
-Install all the tools, and the PDK
-
-[Getting started](https://analogicus.com/aicex/started/)
+Install all the tools, and the PDK. You could follow [Getting started](https://analogicus.com/aicex/started/)
 
 Do 
 
