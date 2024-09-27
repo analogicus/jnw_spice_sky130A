@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Simulation
 
 on:
   # Runs on pushes targeting the default branch
@@ -23,33 +23,19 @@ concurrency:
 
 jobs:
   
-  # Single deploy job since we're just deploying
-  deploy:
+  simulation:
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     container:
-      image: wulffern/aicex:0.1.1
+      image: wulffern/aicex:24.04_0.1.4
       options: --user root
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Checkout tech
-        run: cd ../ && git clone https://github.com/wulffern/tech_sky130A.git
-      - name: Install cicsim
-        run:  python3 -m pip install cicsim
-      - name: Run tests
-        run: |
-          sudo apt install -y pandoc
-          echo "set ngbehavior=hsa\nset ng_nomodcheck \nset skywaterpdk \n set num_threads=8 \n option noinit \n option klu \n optran 0 0 0 100p 2n 0 \n option opts" > $HOME/.spiceinit
-          export PDK_ROOT=/opt/pdk/share/pdk
-          echo "$HOME/.local/bin" >> $GITHUB_PATH
-          echo "/opt/eda/bin" >> $GITHUB_PATH
-          export CIC_RANDOM_PLOTNAME=1
-          export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/eda/lib
-          export PATH=/opt/eda/bin:$HOME/.local/bin:$PATH
-          make all
+      - name: Simulation
+        uses: analogicus/jnw-sim-action@v2
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

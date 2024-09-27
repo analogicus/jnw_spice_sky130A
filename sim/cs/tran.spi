@@ -18,7 +18,6 @@ VSS  VSS  0     dc 0
 VDD  VDD_1V8  0  dc 0 pwl 0 0 10n {AVDD}
 
 
-
 VIN VIN 0 dc 0 sin (0 10m 1G 1u 0 0 )
 
 *- Make a bias source
@@ -40,8 +39,8 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 1n 1u 0
-tran 10p 1.1u 1.09u
+optran 0 0 0 1n 100n 0
+tran 100p 1.1u 1.09u
 write
 quit
 
