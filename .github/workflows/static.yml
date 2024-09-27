@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   
-  simAndDeploy:
+  simulation:
     runs-on: ubuntu-latest
     container:
       image: wulffern/aicex:24.04_0.1.4
@@ -35,6 +35,7 @@ jobs:
         uses: analogicus/jnw-sim-action@main
   deploy:
     runs-on: ubuntu-latest
+    needs: simulation
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
