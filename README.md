@@ -1,5 +1,5 @@
 
-[![Simulation](https://github.com/wulffern/jnw_spice_sky130A/actions/workflows/static.yml/badge.svg)](https://github.com/wulffern/jnw_spice_sky130A/actions/workflows/static.yml)
+[![Simulation](https://github.com/analogicus/jnw_spice_sky130A/actions/workflows/static.yml/badge.svg)](https://github.com/analogicus/jnw_spice_sky130A/actions/workflows/static.yml)
 
 ## Who
 
